@@ -17,6 +17,14 @@ This chat example showcases how to use `socket.io` with a static `express` serve
 Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
 
 ## Ionic 2/3 Instructions:
+
+###### Running Ionic Server:
+    < Trought the shell interface >
+    - ionic serve -p $PORT -r 8081
+    
+    
+    < To preview the aplicattion, shell must return ´dev server running: http://localhost:8080/´ >
+    - Click on ´http://localhost:8080/´ and open the preview.
     
 ###### Init a new project on Ionic:
   
@@ -32,7 +40,6 @@ Once the server is running, open the project in the shape of 'https://projectnam
 
 • Create a project with <Sidemenu navigation> template (Ionic v2)
 
-    
     - ionic start 'PROJECT_NAME' sidemenu --v2
 
 • Create a <Blank project> template (Ionic v2)
@@ -45,10 +52,6 @@ Once the server is running, open the project in the shape of 'https://projectnam
     - ionic start 'PROJECT_NAME' tutorial --v2
 
 
-###### Running Ionic Server:
-    < Trought the shell interface >
-    - ionic serve -p $PORT -r 8081
-    
     
 ###### Creating new App Page:
     < 1. (Automatic creation): Navigate to your App Pages directory, and trought console run: >
@@ -120,6 +123,74 @@ Once the server is running, open the project in the shape of 'https://projectnam
         }
     >
 
+###### Simple syntax of the NavParams to cicle between the app Pages:
+
+    1. In your specific app page typescript, declare in the 'export Class 'Your Page Name':
+    
+     - 'yourVarName' = 'PagaNamefromImport';
+       < Example function: {
+     - usrPage = UsersPage;
+        }>
+
+    2. In the HTML of the main page, use '[]' to set a Ionic function propriety.
+    
+     - <button ion-button [navParams]="YourClassName">'Button Name'</button>  
+      < Example function: {
+     - <button ion-button [navPush]="usrPage">Users</button>
+        }>
+    
+    3. To go back, in the HTML page add another button called 'Go Back' and add a Nav Parameter 'navPop'
+    
+    - <button ion-button navPop>'Button Name'</button>
+    < Example function: {
+    - <button ion-button navPop>Go Back</button>
+    }>
+
+###### Creating 'Tabs' navigation bottom bar:
+
+    1. In the 'pages' folder directory, create a 'tabs' folder;
+
+    2. In the 'tabs' directory, create a new Typescript file 'tabs.ts';
+    
+    3. In the typescript file, add this syntax:
+    
+    - import { Component } from '@angular/core';
+      import { HomePage } from "../home/home";
+      import { FavoritesPage } from "../favorites/favorites";
+
+      @Component({
+       selector: 'page-tabs',
+       template: `
+        <ion-tabs>
+            <ion-tab [root]="mainPage" tabTitle="Home" tabIcon="bookmark"></ion-tab>
+            <ion-tab [root]="favoritesPage" tabTitle="Favorites" tabIcon="book"></ion-tab>
+        </ion-tabs>
+      ` 
+    })
+    export class TabsPage {
+     mainPage = HomePage;
+     favoritesPage = FavoritesPage; 
+    }
+    
+    4. After, at 'app.module.ts', we must import the 'tabs' page from our directory:
+    
+    - import { TabsPage } from '../pages/tabs/tabs';
+      
+      &&&
+    
+    Declare the 'tabs' instance at @NgModule and at bootstrap entryComponents;
+    
+    5. Now, in 'app.component.ts', import the 'tabs' page from our directory:
+    
+    - import { TabsPage } from '../pages/tabs/tabs';
+      
+      &&&
+    
+    At 'export class MyApp {', declare the 'tabs' instance at:
+    - rootPage:any = TabsPage;
+    
+     
+    
 
     
     
