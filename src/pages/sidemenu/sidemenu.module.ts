@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { SidemenuPage } from './sidemenu.ts';
+import { SidemenuPage } from '../sidemenu/sidemenu';
 
 @NgModule({
   declarations: [

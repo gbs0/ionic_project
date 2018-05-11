@@ -7,9 +7,13 @@
 </ion-header>
 
 <ion-content padding>
+  <!-- Trigger loading function and go to users page -->
+  <!-- <button ion-button (click)="trigLoading() onGoToUsers()">Users</button> -->
+  
+  <!-- Go to users page -->
   <button ion-button (click)="onGoToUsers()">Users</button>
-  <!-- <button ion-button (click)="onGoToFavorites()">Favorites</button> -->
-  <button ion-button color='green' (click)="onGoToFavorites()" icon-start>
-      <ion-icon name='paw'></ion-icon>
-      Favoritos</button>
+  
+  <button ion-button color='green' (click)="onGoToLibrary()" icon-start>
+      <ion-icon name='paw'></ion-icon>Favoritos</button>
+      
 </ion-content>

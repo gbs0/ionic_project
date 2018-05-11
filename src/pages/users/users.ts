@@ -14,7 +14,6 @@ export class UsersPage {
     this.navCtrl.push(UserPage, {UserName: name});
   }
   
-  //*ionViewCanEnter(): {*/
-    
- //*}/*
+  /** ionViewCanEnter():{} */ 
+
 }

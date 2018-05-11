@@ -1,0 +1,158 @@
+export default [ 
+    {
+    category: 'inpiracional',
+    db: [
+        {
+            id: '1',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '2',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '3',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '4',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '5',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        }
+    ],
+    icon: 'brush'
+  },
+  {
+    category: 'inpiracional',
+    db: [
+        {
+            id: '6',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '7',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '8',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '9',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '10',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        }
+    ],
+    icon: 'brush'
+ },
+ { 
+    category: 'inpiracional',
+    db: [
+        {
+            id: '11',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '12',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '13',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '14',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '15',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        }
+    ],
+    icon: 'brush'
+ },
+ {
+    
+    category: 'inpiracional',
+    db: [
+        {
+            id: '16',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '17',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '18',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '19',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '20',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        }
+    ],
+    icon: 'brush'
+ },
+ {
+     
+    category: 'inpiracional',
+    db: [
+        {
+            id: '21',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '22',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '23',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '24',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        },
+        {
+            id: '25',
+            person: 'XYZ',
+            text: 'Lorem Ipslum'
+        }
+    ]
+  }
+];

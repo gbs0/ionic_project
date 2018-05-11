@@ -10,7 +10,7 @@ import { UsersPage } from '../pages/users/users';
 import { UserPage } from '../pages/users/user/user';
 import { FavoritesPage } from '../pages/favorites/favorites';
 import { TabsPage } from '../pages/tabs/tabs';
-
+import { LibraryPage } from '../pages/library/library';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     UsersPage,
     UserPage,
     FavoritesPage,
-    TabsPage
+    TabsPage,
+    LibraryPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +33,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     UsersPage,
     UserPage,
     FavoritesPage,
-    TabsPage
+    TabsPage,
+    LibraryPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,20 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Biblioteca</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h3 text-center>Selecione uma das opções abaixo</h3>
+  <ion-list>
+    <button ion-item *ngFor="let dbGroup of dbCollection">
+      <ion-icon [name]="dbGroup.icon" item-left></ion-icon>
+      <h2>{{ dbGroup.category }}</h2>
+      <p>{{ dbGroup.db.length }} Quotes</p>
+    </button>
+  </ion-list>
+</ion-content>
