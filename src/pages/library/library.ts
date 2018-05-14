@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Db } from "../../data/db.interface";
-import { db } from "../../data/db";
+import { Quote } from "../../data/db.interface";
+import { quotes } from "../../data/db";
 
 @IonicPage()
 @Component({
   selector: 'page-library',
   templateUrl: 'library.html',
 })
+
 export class LibraryPage implements OnInit {
-  dbCollection: {category: string, db: Db[], icon:string}[];
+  quoteCollection: {category: string, quotes: Quote[], icon:string}[];
 
   ngOnInit() {
-    this.dbCollection = db;
+    this.quoteCollection = quotes;
+    /** console.log('ionViewDidLoad Quotes'); */
   }
 }

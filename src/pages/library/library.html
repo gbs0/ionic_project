@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -7,14 +6,14 @@
 
 </ion-header>
 
-
 <ion-content padding>
   <h3 text-center>Selecione uma das opções abaixo</h3>
   <ion-list>
-    <button ion-item *ngFor="let dbGroup of dbCollection">
-      <ion-icon [name]="dbGroup.icon" item-left></ion-icon>
-      <h2>{{ dbGroup.category }}</h2>
-      <p>{{ dbGroup.db.length }} Quotes</p>
+    <!-- Método *ngFor serve p/ lopar entre os valores do db e aplica-las nos botões. --> 
+    <button ion-item *ngFor="let quoteGroup of quoteCollection">
+      <ion-icon [name]="quoteGroup.icon" item-left></ion-icon>
+       <h2>{{ quoteGroup.category }}</h2>
+       <p>{{ quoteGroup.quotes.length }} Quotes</p>
     </button>
   </ion-list>
 </ion-content>

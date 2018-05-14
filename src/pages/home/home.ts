@@ -8,6 +8,7 @@ import { UsersPage } from "../users/users";
 import { FavoritesPage } from '../favorites/favorites';
 import { LibraryPage } from '../library/library';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -26,6 +27,7 @@ export class HomePage {
   
   onGoToFavorites() {
     this.navCtrl.push(FavoritesPage);
+    console.log('Favorites Page');
   }
   
   /** onGoToLoading() {

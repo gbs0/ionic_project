@@ -6,7 +6,7 @@ webpackJsonp([2],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_db__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_db__ = __webpack_require__(248);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,11 +19,12 @@ var LibraryPage = /** @class */ (function () {
     function LibraryPage() {
     }
     LibraryPage.prototype.ngOnInit = function () {
-        this.dbCollection = __WEBPACK_IMPORTED_MODULE_1__data_db__["db"];
+        this.quoteCollection = __WEBPACK_IMPORTED_MODULE_1__data_db__["quotes"];
+        /** console.log('ionViewDidLoad Quotes'); */
     };
     LibraryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-library',template:/*ion-inline-start:"/home/ubuntu/workspace/blankApp/src/pages/library/library.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Biblioteca</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h3 text-center>Selecione uma das opções abaixo</h3>\n  <ion-list>\n    <button ion-item *ngFor="let dbGroup of dbCollection">\n      <ion-icon [name]="dbGroup.icon" item-left></ion-icon>\n      <h2>{{ dbGroup.category }}</h2>\n      <p>{{ dbGroup.db.length }} Quotes</p>\n    </button>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/home/ubuntu/workspace/blankApp/src/pages/library/library.html"*/,
+            selector: 'page-library',template:/*ion-inline-start:"/home/ubuntu/workspace/blankApp/src/pages/library/library.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Biblioteca</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<!-- Método *ngFor serve p/ lopar entre os valores do db e aplica-las nos botões. -->\n\n<ion-content padding>\n  <h3 text-center>Selecione uma das opções abaixo</h3>\n  <ion-list>\n    <button ion-item *ngFor="let quoteGroup of quoteCollection">Quotes</button>\n    <ion-icon {{ quoteGroup.icon }}></ion-icon>\n  </ion-list>  \n    \n    \n    <!-- <button ion-item *ngFor="let quoteGroup of quoteCollection">\n      <ion-icon [name]="quoteGroup.icon"></ion-icon>\n      <h2>{{ quoteGroup.category }}</h2>\n      <p>{{ quoteGroup.quotes.length }} Quotes</p>\n    </button>\n  -->\n</ion-content>\n'/*ion-inline-end:"/home/ubuntu/workspace/blankApp/src/pages/library/library.html"*/,
         })
     ], LibraryPage);
     return LibraryPage;
@@ -59,7 +60,7 @@ var map = {
 		1
 	],
 	"../pages/library/library.module": [
-		274,
+		276,
 		0
 	]
 };
@@ -151,6 +152,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage.prototype.onGoToFavorites = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__favorites_favorites__["a" /* FavoritesPage */]);
+        console.log('Favorites Page');
     };
     /** onGoToLoading() {
       let loader = this.loadingCtrl.create({
@@ -165,7 +167,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/ubuntu/workspace/blankApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Basis\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- Trigger loading function and go to users page -->\n  <!-- <button ion-button (click)="trigLoading() onGoToUsers()">Users</button> -->\n  \n  <!-- Go to users page -->\n  <button ion-button (click)="onGoToUsers()">Users</button>\n  \n  <button ion-button color=\'green\' (click)="onGoToLibrary()" icon-start>\n      <ion-icon name=\'paw\'></ion-icon>Favoritos</button>\n      \n</ion-content>\n'/*ion-inline-end:"/home/ubuntu/workspace/blankApp/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/ubuntu/workspace/blankApp/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Ionic Basis\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <!-- Trigger loading function and go to users page -->\n  <!-- <button ion-button (click)="trigLoading() onGoToUsers()">Users</button> -->\n  \n  <!-- Go to users page -->\n  <button ion-button (click)="onGoToUsers()">Users</button>\n  \n  <button ion-button color=\'green\' (click)="onGoToLibrary()" icon-start>\n      <ion-icon name=\'paw\'></ion-icon>Lista</button>\n      \n</ion-content>\n'/*ion-inline-end:"/home/ubuntu/workspace/blankApp/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* LoadingController */]])
@@ -288,7 +290,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_users_users__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_users_user_user__ = __webpack_require__(198);
@@ -331,8 +333,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/library/library.module#LibraryPageModule', name: 'LibraryPage', segment: 'library', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/favorites/favorites.module#FavoritesPageModule', name: 'FavoritesPage', segment: 'favorites', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/favorites/favorites.module#FavoritesPageModule', name: 'FavoritesPage', segment: 'favorites', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/library/library.module#LibraryPageModule', name: 'LibraryPage', segment: 'library', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -360,7 +362,28 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 273:
+/***/ 248:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony default export */ var _unused_webpack_default_export = ([
+    {
+        category: 'Lorem Ipsululm',
+        quotes: [
+            {
+                id: '1',
+                person: 'Lorem Ipsululm',
+                text: 'Lorem Ipsululm'
+            }
+        ],
+        icon: 'brush'
+    }
+]);
+//# sourceMappingURL=db.js.map
+
+/***/ }),
+
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -403,170 +426,6 @@ var MyApp = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 276:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony default export */ var _unused_webpack_default_export = ([
-    {
-        category: 'inpiracional',
-        db: [
-            {
-                id: '1',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '2',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '3',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '4',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '5',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            }
-        ],
-        icon: 'brush'
-    },
-    {
-        category: 'inpiracional',
-        db: [
-            {
-                id: '6',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '7',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '8',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '9',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '10',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            }
-        ],
-        icon: 'brush'
-    },
-    {
-        category: 'inpiracional',
-        db: [
-            {
-                id: '11',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '12',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '13',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '14',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '15',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            }
-        ],
-        icon: 'brush'
-    },
-    {
-        category: 'inpiracional',
-        db: [
-            {
-                id: '16',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '17',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '18',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '19',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '20',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            }
-        ],
-        icon: 'brush'
-    },
-    {
-        category: 'inpiracional',
-        db: [
-            {
-                id: '21',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '22',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '23',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '24',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            },
-            {
-                id: '25',
-                person: 'XYZ',
-                text: 'Lorem Ipslum'
-            }
-        ]
-    }
-]);
-//# sourceMappingURL=db.js.map
 
 /***/ }),
 
